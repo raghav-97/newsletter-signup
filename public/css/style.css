@@ -1,0 +1,170 @@
+/* Main CSS Style Sheet */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(234, 29%, 20%);
+  font-family: "Roboto", sans-serif;
+}
+
+/* Main Container */
+.container {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+  display: flex;
+  height: 500px;
+  justify-content: space-between;
+  left: 50%;
+  margin: 0 auto;
+  padding: 30px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  width: 800px;
+}
+
+.signup-form {
+  padding: 20px 25px;
+  width: 410px;
+}
+
+.signup-form h2 {
+  font-size: 45px;
+  font-weight: 700;
+  padding-bottom: 25px;
+}
+
+.signup-form p {
+  padding: 5px 0 15px 0;
+}
+
+/* List Section */
+.list ul li {
+  list-style: none;
+  padding-left: 10px;
+}
+
+ul .li {
+  display: flex;
+  padding: 5px 0;
+}
+
+/* Email Input Styles */
+.email-box {
+  display: inline-block;
+  padding: 10px 0;
+}
+
+.email-box input,
+button {
+  border-radius: 5px;
+  padding: 8px 15px;
+  width: 100%;
+}
+
+.email-box button {
+  margin: 8px auto;
+}
+
+.email-box input {
+  border-color: hsl(231, 7%, 60%);
+  margin: 8px auto 0;
+}
+
+.email-box p {
+  font-weight: 700;
+  font-size: 12px;
+  padding: 15px 0 5px 0;
+}
+
+.email-box button {
+  background-color: hsl(234, 29%, 20%);
+  border: none;
+  color: #fff;
+  font-weight: 400;
+  padding: 10px 0;
+}
+
+.email-box button:hover {
+  background-color: hsl(4, 100%, 67%);
+  transition: 1s;
+}
+
+/* Labels Above input */
+.labels {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image {
+  text-align: center;
+}
+
+.desktopImg {
+  height: 475px;
+  width: 100%;
+}
+
+.mobileImg {
+  display: none;
+}
+
+/* Error State Style */
+.hidden {
+  display: none;
+}
+
+.valid-text {
+  color: hsl(4, 100%, 67%);
+}
+
+.error-state {
+  background-color: hsl(5, 71%, 82%);
+  color: hsl(4, 100%, 67%);
+}
+
+.attribution {
+  bottom: 0;
+  font-size: 11px;
+  left: 50%;
+  position: fixed;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Mobile View 375px*/
+
+@media screen and (max-width: 400px) {
+  .container {
+    flex-direction: column-reverse;
+    height: 100vh;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 0 30px;
+  }
+
+  .desktopImg {
+    display: none;
+    top: 0;
+  }
+
+  .mobileImg {
+    display: block;
+  }
+
+  .signup-form {
+    padding: 35px;
+  }
+
+  .attribution {
+    display: none;
+  }
+}
